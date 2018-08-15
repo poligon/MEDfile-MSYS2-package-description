@@ -15,7 +15,7 @@ build() {
   cd ${srcdir}/med-${pkgver}_SRC
   mkdir -p build
   cd build
-  cmake -G "MinGW Makefiles" -DCMAKE_SH="CMAKE_SH-NOTFOUND" -DMEDFILE_BUILD_TESTS=OFF -DMEDFILE_INSTALL_DOC=OFF -DCMAKE_BUILD_TYPE="Release" -DCMAKE_C_FLAGS="-O3 -mmmx -msse -msse2 -mfpmath=sse" -DINTERPROCEDURAL_OPTIMIZATION=ON -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_INSTALL_PREFIX="$pkgdir/usr/" ../
+  cmake -G "MinGW Makefiles" -DCMAKE_SH="CMAKE_SH-NOTFOUND" -DMEDFILE_BUILD_TESTS=OFF -DMEDFILE_INSTALL_DOC=OFF -DCMAKE_BUILD_TYPE="Release" -DCMAKE_C_FLAGS="-O3 -mmmx -msse -msse2 -mfpmath=sse" -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=TRUE -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_INSTALL_PREFIX="$pkgdir/usr/" ../
   cmake --build . -- -j4
 }
 
