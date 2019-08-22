@@ -1,5 +1,5 @@
 pkgname=med
-pkgver=3.3.1
+pkgver=4.0.0
 pkgrel=1
 pkgdesc="MED (Modelisation et Echanges de Donnees, i.e. Data Modelization and Exchanges) file library"
 url="http://www.salome-platform.org/user-section/about/med"
@@ -9,7 +9,7 @@ makedepends=('mingw-w64-x86_64-gcc'
              'mingw-w64-x86_64-cmake')
 arch=('x86_64')
 source=("med-${pkgver}.tar.gz")
-sha256sums=('dd631ef813838bc7413ff0dd6461d7a0d725bcfababdf772ece67610a8d22588'
+sha256sums=('a474e90b5882ce69c5e9f66f6359c53b8b73eb448c5f631fa96e8cd2c14df004'
             )
 build() {
   cd ${srcdir}/med-${pkgver}_SRC
