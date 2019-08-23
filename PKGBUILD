@@ -12,7 +12,7 @@ source=("med-${pkgver}.tar.gz")
 sha256sums=('a474e90b5882ce69c5e9f66f6359c53b8b73eb448c5f631fa96e8cd2c14df004'
             )
 build() {
-  cd ${srcdir}/med-${pkgver}_SRC
+  cd ${srcdir}/med-${pkgver}
   mkdir -p build
   cd build
   cmake -G "MinGW Makefiles" -DCMAKE_SH="CMAKE_SH-NOTFOUND" -DMEDFILE_BUILD_TESTS=OFF -DMEDFILE_INSTALL_DOC=OFF -DCMAKE_BUILD_TYPE="Release" -DCMAKE_C_FLAGS="-O3 -mmmx -msse -msse2 -mfpmath=sse" -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=TRUE -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_INSTALL_PREFIX="$pkgdir/usr/" ../
@@ -20,6 +20,6 @@ build() {
 }
 
 package() {
-  cd ${srcdir}/${pkgname}-${pkgver}_SRC/build
+  cd ${srcdir}/${pkgname}-${pkgver}/build
   cmake --build . --target install
 }
