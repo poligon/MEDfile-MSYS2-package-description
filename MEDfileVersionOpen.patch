@@ -1,0 +1,24 @@
+--- ci/MEDfileVersionOpen.c	2018-12-10 13:17:55.000000000 +0300
++++ ci/myopen	2019-09-24 18:20:23.503381001 +0300
+@@ -62,16 +62,10 @@
+   switch(accessmode)
+     {
+     case MED_ACC_RDONLY :
+-      if (access(filename,F_OK)) {
+-	MED_ERR_(_ret,MED_ERR_EXIST,MED_ERR_FILE,filename);
+-	goto ERROR;
+-
+-      } else {
+ 	if ((_fid = _MEDfileOpen((char*) filename,accessmode)) < 0) {
+ 	  MED_ERR_(_ret,MED_ERR_OPEN,MED_ERR_FILE,filename);
+ 	  goto ERROR;
+ 	}
+-      };
+       break;
+ 
+     case MED_ACC_RDWR :
+@@ -123,3 +117,4 @@
+   return _fid;
+ }
+ 
++
