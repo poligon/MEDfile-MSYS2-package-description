@@ -8,9 +8,17 @@ depends=('mingw-w64-x86_64-hdf5')
 makedepends=('mingw-w64-x86_64-gcc' 
              'mingw-w64-x86_64-cmake')
 arch=('x86_64')
-source=("med-${pkgver}.tar.gz")
+source=("med-${pkgver}.tar.gz"
+	"MEDfileVersionOpen.patch")
 sha256sums=('a474e90b5882ce69c5e9f66f6359c53b8b73eb448c5f631fa96e8cd2c14df004'
+	'8899d1e3fa7617799438b9cc3fb346c9b5f2dad4c8583a6528f4f9f0a32c0691'
             )
+
+prepare () {
+  cd ${srcdir}/${pkgname}-${pkgver}/src
+  patch ci/MEDfileVersionOpen.c < ${srcdir}/"MEDfileVersionOpen.patch")
+}
+
 build() {
   cd ${srcdir}/med-${pkgver}
   mkdir -p build
