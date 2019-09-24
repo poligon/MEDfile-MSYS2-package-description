@@ -16,7 +16,7 @@ sha256sums=('a474e90b5882ce69c5e9f66f6359c53b8b73eb448c5f631fa96e8cd2c14df004'
 
 prepare () {
   cd ${srcdir}/${pkgname}-${pkgver}/src
-  patch ci/MEDfileVersionOpen.c < ${srcdir}/"MEDfileVersionOpen.patch")
+  patch ci/MEDfileVersionOpen.c < ${srcdir}/"MEDfileVersionOpen.patch"
 }
 
 build() {
