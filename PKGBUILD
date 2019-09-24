@@ -1,6 +1,6 @@
 pkgname=med
 pkgver=4.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="MED (Modelisation et Echanges de Donnees, i.e. Data Modelization and Exchanges) file library"
 url="http://www.salome-platform.org/user-section/about/med"
 license=('LGPL')
