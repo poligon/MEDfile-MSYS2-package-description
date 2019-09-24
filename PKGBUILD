@@ -4,7 +4,7 @@ pkgrel=2
 pkgdesc="MED (Modelisation et Echanges de Donnees, i.e. Data Modelization and Exchanges) file library"
 url="http://www.salome-platform.org/user-section/about/med"
 license=('LGPL')
-depends=('mingw-w64-x86_64-hdf5')
+depends=('mingw-w64-x86_64-hdf5>=1.10.2')
 makedepends=('mingw-w64-x86_64-gcc' 
              'mingw-w64-x86_64-cmake')
 arch=('x86_64')
